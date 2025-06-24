@@ -39,4 +39,4 @@ RUN chown -R www-data:www-data storage bootstrap/cache
 EXPOSE 80
 
 # Start Apache
-CMD php artisan migrate --force && php artisan db:seed && apache2-foreground
+CMD php artisan migrate:fresh --force && php artisan db:seed && apache2-foreground
